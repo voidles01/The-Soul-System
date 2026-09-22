@@ -1,0 +1,162 @@
+database:
+  type: sqlite
+  file: souls.db
+  host: localhost
+  port: 3306
+  name: souls
+  username: root
+  password: change-me
+  parameters: '?useUnicode=true&characterEncoding=utf8'
+
+souls:
+  max-balance: 1000
+
+local-data:
+  enabled: true
+  folder: server-data
+
+guide:
+  auto-open: true
+
+earning:
+  pve:
+    enabled: true
+    rewards:
+      ZOMBIE: 1
+      SKELETON: 1
+      SPIDER: 1
+      CREEPER: 2
+      ENDERMAN: 4
+      BLAZE: 3
+      WITHER_SKELETON: 5
+  pvp:
+    enabled: true
+    base-reward: 10
+    cooldown-seconds: 3600
+    diminishing-period-seconds: 86400
+    diminishing-factor: 0.5
+
+fragments:
+  enabled: true
+  conversion-rate: 10
+  item-material: PRISMARINE_SHARD
+  item-name: '&bSoul Fragment'
+  pve-drops:
+    ZOMBIE: 1
+    SKELETON: 1
+    BOGGED: 1
+    CAVE_SPIDER: 1
+    DROWNED: 1
+    ENDERMITE: 1
+    HUSK: 1
+    SILVERFISH: 1
+    SPIDER: 1
+    STRAY: 1
+    ZOMBIE_VILLAGER: 1
+    ZOMBIFIED_PIGLIN: 1
+    BLAZE: 2
+    BREEZE: 2
+    CREEPER: 2
+    GUARDIAN: 2
+    HOGLIN: 2
+    MAGMA_CUBE: 2
+    PHANTOM: 2
+    PIGLIN: 2
+    PILLAGER: 2
+    SHULKER: 2
+    SLIME: 2
+    VEX: 2
+    WITCH: 2
+    WITHER_SKELETON: 2
+    ZOGLIN: 2
+    ENDERMAN: 3
+    EVOKER: 3
+    GHAST: 3
+    PIGLIN_BRUTE: 3
+    VINDICATOR: 3
+    RAVAGER: 5
+    ELDER_GUARDIAN: 8
+    WARDEN: 16
+    WITHER: 24
+    ENDER_DRAGON: 32
+
+boost:
+  enabled: true
+  souls-per-step: 100
+  amplifier-per-step: 0.5
+  max-nerf: 0.80
+  haste: true
+  strength: true
+  speed: true
+  absorption: true
+
+loss:
+  enabled: true
+  percentage: 0.50
+  maximum: 0
+
+worlds:
+  default:
+    enabled: true
+    pve: true
+    pvp: true
+
+features:
+  shop:
+    enabled: true
+  altar:
+    enabled: true
+  powers:
+    enabled: true
+  bounties:
+    enabled: true
+  shrines:
+    enabled: true
+  random-events:
+    enabled: true
+
+altar:
+  cost: 50
+  permission: souls.altar
+  upgrades:
+    damage:
+      min: 0.02
+      max: 0.30
+    durability:
+      min: 0.02
+      max: 0.35
+    lifesteal:
+      min: 0.02
+      max: 0.20
+    attract:
+      min: 0.02
+      max: 0.20
+    speed:
+      min: 0.05
+      max: 0.20
+  caps:
+    damage: 1.50
+    durability: 3.00
+    lifesteal: 0.70
+    attract: 0.70
+    speed: 1.40
+  feedback:
+    sound: BLOCK_ENCHANTMENT_TABLE_USE
+    particle: ENCHANT
+
+shrine:
+  cooldown-hours: 2
+  permission: souls.shrine
+  reward:
+    type: random
+    souls: 25
+    fragments: 2
+    event-chance: 1.0
+    broadcast: true
+    buff:
+      type: SPEED
+      duration-seconds: 300
+      amplifier: 1
+  feedback:
+    sound: BLOCK_BEACON_ACTIVATE
+    particle: SOUL_FIRE_FLAME

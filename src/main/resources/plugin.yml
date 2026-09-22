@@ -1,0 +1,35 @@
+name: Souls
+version: '${version}'
+prefix: Enhanced
+main: com.kodari.souls.SoulsPlugin
+api-version: '1.20'
+author: Kodari
+softdepend:
+  - PlaceholderAPI
+commands:
+  souls:
+    description: View and manage Souls.
+    usage: /souls [stats|top|pay|give|take|set|remove <player> [amount|all]|inspect|convert|reload]
+    aliases:
+      - soul
+  guide:
+    description: Open the Souls tutorial book.
+    usage: /guide
+    aliases:
+      - soul-guide
+permissions:
+  souls.use:
+    description: Use the Souls command.
+    default: true
+  souls.pay:
+    description: Pay Souls to another player.
+    default: true
+  souls.admin:
+    description: Use administrative Souls commands.
+    default: op
+  souls.altar:
+    description: Use Soul Altars.
+    default: true
+  souls.shrine:
+    description: Use Soul Shrines.
+    default: true

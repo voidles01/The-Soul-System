@@ -1,0 +1,3 @@
+include:
+  - sqlite-jdbc
+  - mariadb-java-client
